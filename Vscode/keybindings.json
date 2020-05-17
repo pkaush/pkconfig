@@ -1,0 +1,383 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+b b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b a",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "ctrl+b f",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "ctrl+b n",
+        "command": "workbench.action.nextSideBarView"
+    },
+    {
+        "key": "ctrl+b p",
+        "command": "workbench.action.previousSideBarView"
+    },
+    {
+        "key": "ctrl+b m",
+        "command": "workbench.action.toggleMenuBar"
+    },
+    {
+        "key": "ctrl+b s",
+        "command": "workbench.action.toggleStatusbarVisibility"
+    },
+    {
+        "key": "ctrl+b l",
+        "command": "workbench.action.toggleSidebarPosition"
+    },
+    {
+        "key": "ctrl+b o",
+        "command": "outline.focus"
+    },
+    {
+        "key": "ctrl+b e",
+        "command": "workbench.files.action.focusFilesExplorer"
+    },
+    {
+        "key": "ctrl+b r",
+        "command": "search.action.focusSearchList"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusAboveGroup",
+        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusBelowGroup",
+        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": ", t",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "!editorTextFocus"
+    },
+    // New config - compare it with above config
+    {
+        "key": "ctrl+w j",
+        "command": "workbench.action.focusBelowGroup",
+    },
+    {
+        "key": "ctrl+w k",
+        "command": "workbench.action.focusAboveGroup",
+    },
+    {
+        "key": "ctrl+w h",
+        "command": "workbench.action.focusLeftGroup",
+    },
+    {
+        "key": "ctrl+w l",
+        "command": "workbench.action.focusRightGroup",
+    },
+    {
+        "key": "ctrl+w down",
+        "command": "workbench.action.moveActiveEditorGroupDown",
+    },
+    {
+        "key": "ctrl+w up",
+        "command": "workbench.action.moveActiveEditorGroupUp",
+    },
+    {
+        "key": "ctrl+w left",
+        "command": "workbench.action.moveActiveEditorGroupLeft",
+    },
+    {
+        "key": "ctrl+w right",
+        "command": "workbench.action.moveActiveEditorGroupRight",
+    },
+    {
+        "key": "' a",
+        "command": "numberedBookmarks.jumpToBookmark1",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "' b",
+        "command": "numberedBookmarks.jumpToBookmark2",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "' c",
+        "command": "numberedBookmarks.jumpToBookmark3",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "' d",
+        "command": "numberedBookmarks.jumpToBookmark4",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "' e",
+        "command": "numberedBookmarks.jumpToBookmark5",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "' f",
+        "command": "numberedBookmarks.jumpToBookmark6",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "' g",
+        "command": "numberedBookmarks.jumpToBookmark7",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "' h",
+        "command": "numberedBookmarks.jumpToBookmark8",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "' i",
+        "command": "numberedBookmarks.jumpToBookmark9",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "' j",
+        "command": "numberedBookmarks.jumpToBookmark0",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "-numberedBookmarks.jumpToBookmark1",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "-numberedBookmarks.jumpToBookmark2",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+3",
+        "command": "-numberedBookmarks.jumpToBookmark3",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+4",
+        "command": "-numberedBookmarks.jumpToBookmark4",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+5",
+        "command": "-numberedBookmarks.jumpToBookmark5",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+6",
+        "command": "-numberedBookmarks.jumpToBookmark6",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+7",
+        "command": "-numberedBookmarks.jumpToBookmark7",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+8",
+        "command": "-numberedBookmarks.jumpToBookmark8",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+9",
+        "command": "-numberedBookmarks.jumpToBookmark9",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.focusNextGroup"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+w shift+-",
+        "command": "workbench.action.minimizeOtherEditors"
+    },
+    {
+        "key": "ctrl+w =",
+        "command": "workbench.action.evenEditorWidths"
+    },
+    {
+        "key": "ctrl+w v",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "ctrl+w s",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+w c",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    // Move the buffers around
+    {
+        "key": "ctrl+w ctrl+k",
+        "command": "workbench.action.moveEditorToAboveGroup"
+    },
+    {
+        "key": "ctrl+w ctrl+j",
+        "command": "workbench.action.moveEditorToBelowGroup",
+    },
+    {
+        "key": "ctrl+w ctrl+h",
+        "command": "workbench.action.moveEditorToLeftGroup"
+    },
+    {
+        "key": "ctrl+w ctrl+l",
+        "command": "workbench.action.moveEditorToRightGroup"
+    },
+    {
+        "key": "ctrl+w o",
+        "command": "workbench.action.joinAllGroups"
+    },
+    // Side windows control
+    {
+        "key": "ctrl+b",
+        "command": "-extension.vim_ctrl+b",
+        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "-extension.vim_ctrl+k",
+        "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+b b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "\\ t",
+        "command": "workbench.view.explorer",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b a",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "ctrl+b f",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "ctrl+b n",
+        "command": "workbench.action.nextSideBarView"
+    },
+    {
+        "key": "ctrl+b p",
+        "command": "workbench.action.previousSideBarView"
+    },
+    {
+        "key": "ctrl+b m",
+        "command": "workbench.action.toggleMenuBar"
+    },
+    {
+        "key": "ctrl+b s",
+        "command": "workbench.action.toggleStatusbarVisibility"
+    },
+    {
+        "key": "ctrl+b l",
+        "command": "workbench.action.toggleSidebarPosition"
+    },
+    {
+        "key": "ctrl+b o",
+        "command": "outline.focus"
+    },
+    {
+        "key": "ctrl+b e",
+        "command": "workbench.files.action.focusFilesExplorer"
+    },
+    {
+        "key": "ctrl+b r",
+        "command": "search.action.focusSearchList"
+    },
+    {
+        "key": "ctrl+' l",
+        "command": "workbench.action.togglePanelPosition"
+    },
+    {
+        "key": "ctrl+' '",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+' c",
+        "command": "workbench.debug.panel.action.clearReplAction",
+        "when": "inDebugRepl"
+    },
+    {
+        "key": "meta+l",
+        "command": "-workbench.debug.panel.action.clearReplAction",
+        "when": "inDebugRepl"
+    },
+    {
+        "key": "ctrl+' c",
+        "command": "workbench.action.closePanel"
+    },
+    {
+        "key": "ctrl+' space",
+        "command": "workbench.action.focusPanel"
+    },
+    {
+        "key": "ctrl+' n",
+        "command": "workbench.action.nextPanelView"
+    },
+    {
+        "key": "ctrl+' p",
+        "command": "workbench.action.previousPanelView"
+    },
+    {
+        "key": "ctrl+' shift+-",
+        "command": "workbench.action.toggleMaximizedPanel"
+    }
+]

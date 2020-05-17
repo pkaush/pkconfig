@@ -1,0 +1,203 @@
+// Vscode user config file
+{
+    "editor.formatOnSave": false,
+    "clang-format.executable": "C:\\Program Files\\LLVM\\bin\\clang-format.exe",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "C:\\Python36\\Scripts\\black.exe",
+    "python.autoComplete.addBrackets": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.trimTrailingWhitespace": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "window.zoomLevel": 0,
+    "editor.lineNumbers": "on",
+    "editor.renderWhitespace": "all",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    //////////////////////////////////////////////////////
+    // FONTS
+    "editor.fontFamily": "SauceCodePro NF",
+    // Configures font ligatures or font features.
+    "editor.fontligatures": true,
+    // Controls the font size in pixels.
+    "editor.fontSize": 14,
+    //////////////////////////////////////////////////////
+    //Neovim - configuration:
+    // Full path to Neovim executable. If you have enabled useWSL specify the linux path to nvim executable
+    "vscode-neovim.neovimPath": "C:\\tools\\neovim\\Neovim\\bin\\nvim.exe",
+    // Use neovim installed in WSL. If you enable it, specify neovim path installed in WSL
+    // "vscode-neovim.useWSL": false,
+    // Mouse selection starts visual mode
+    // The extenison for now works best if editor.scrollBeyondLastLine is disabled.
+    "editor.scrollBeyondLastLine": false,
+    "vscode-neovim.mouseSelectionStartVisualMode": true,
+    // Full path to custom neovim init file, equals to startup option -u. If checked useWSL flag specify a Linux path. You can also use exists('g:vscode') in your init.vim to check if neovim is being run in vscode and share init file between neovim/vscode
+    "vscode-neovim.neovimInitPath": "C:\\Users\\puneetk\\.pkconfig\\Vim\\vscodeneo.vim",
+    ////////////////////////////////////////////////////////
+    // Vscodevim config - will help to make sure they are inline with ~/.config/Vim/vimcommon.vim
+    "vim.leader": "\\",
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    // Allow VSCodeVim to change status bar color based on mode. **NOTE:** Using this feature will have a negative impact on performance.
+    // "vim.statusBarColorControl": false,
+    // Use key mappings from a .vimrc file.
+    "vim.vimrc.enable": true,
+    // Path to a Vim configuration file. If unset, it will check for $HOME/.vimrc or $HOME/_vimrc.
+    "vim.vimrc.path": "C:\\Users\\puneetk\\.pkconfig\\Vscode\\vscode.vim",
+    // Insert mode keybinding
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+    ],
+    // Normal mode keybinding
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl",
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.files.save",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                ":q"
+            ]
+        },
+        // leader - t will open the sidebar if closed and shift the focus to it.
+        {
+            "before": [
+                "<leader>",
+                "t"
+            ],
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        },
+        // Numbered Bookmarks
+        {
+            "before": [
+                "m",
+                "a"
+            ],
+            "commands": [
+                "numberedBookmarks.toggleBookmark1"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "b"
+            ],
+            "commands": [
+                "numberedBookmarks.toggleBookmark2"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "c"
+            ],
+            "commands": [
+                "numberedBookmarks.toggleBookmark3"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "d"
+            ],
+            "commands": [
+                "numberedBookmarks.toggleBookmark4"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "e"
+            ],
+            "commands": [
+                "numberedBookmarks.toggleBookmark5"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "f"
+            ],
+            "commands": [
+                "numberedBookmarks.toggleBookmark6"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "g"
+            ],
+            "commands": [
+                "numberedBookmarks.toggleBookmark7"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "h"
+            ],
+            "commands": [
+                "numberedBookmarks.toggleBookmark8"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "i"
+            ],
+            "commands": [
+                "numberedBookmarks.toggleBookmark9"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "j"
+            ],
+            "commands": [
+                "numberedBookmarks.toggleBookmark0"
+            ]
+        },
+    ],
+    "gitlens.gitCommands.closeOnFocusOut": true,
+    "workbench.activityBar.visible": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    },
+    "sync.gist": "a8e4df4daa132170a91cdd942d3cd1f0",
+    "workbench.colorTheme": "Visual Studio Dark",
+}
