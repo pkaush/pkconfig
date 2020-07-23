@@ -1,0 +1,117 @@
+#
+# bind the character ! on the main view. The !? means that the external command
+# (!)git revert will ask for confirmation (?) before it’s run. Finally,
+# the %(commit) will be replaced by the commit we highlighted on the main view.
+#
+# All the bindings which are not in use right now are commented. Uncomment when needed.
+#
+
+
+##############################################
+# Main window
+##############################################
+
+#bind main ! !?git revert %(commit)
+
+# jf submit the diff for review
+bind main t !jf submit -n %(commit)
+bind main T !?jf submit %(commit)
+
+# Interactive rebase:
+bind main B !git rebase -i %(commit)
+
+# Continue the rebase:
+bind main c !git rebase --continue
+
+# Revert:
+#bind main ! !git revert %(commit)
+
+# Tag the selected commit:
+# bind main T !@git tag %(prompt) %(commit)
+##############################################
+# Status window
+##############################################
+
+# Amend last commit:
+#bind generic + !?git commit --amend
+bind status a !?git commit --amend
+
+# Add verbose flag to git-commit:
+bind status C !git commit -v
+
+# Intent to add:
+bind status N !@git add -N %(file) (might be useful if you want to add-patch a newly created file)
+
+# Stage a single line:
+bind stage 1 stage-update-line
+
+
+# Stash the unstaged changes:
+bind status S !?git stash save --keep-index %(prompt)
+
+# Delete a file:
+bind status D !@?rm %(file)
+
+# Patch the file under the cursor:
+bind status P !git add --patch %(file)
+
+# Push local changes to origin:
+# bind status P !git push origin
+
+# Add selected file to .gitignore and open vim for additional changes:
+bind status <Ctrl-r> !sh -c "echo %(file) >> .gitignore && vi .gitignore"
+
+##############################################
+# Diff window
+##############################################
+# Move in diff view with arrow keys:
+bind diff <Up> move-up and bind diff <Down> move-down
+
+
+
+##############################################
+# Refs window
+##############################################
+# Create a new branch:
+bind refs n !@git branch "%(prompt Enter branch name: )"
+
+
+##############################################
+# Stash window
+##############################################
+
+# Drop the selected stash:
+# bind stash D !?git stash drop %(stash)
+
+# Apply the selected stash:
+bind stash A !?git stash apply %(stash)
+
+
+##############################################
+# Generic window
+##############################################
+# Add/edit notes for the current commit used during a review:
+#bind generic T !git notes edit %(commit)
+
+# less-like page scrolling:
+bind generic <Ctrl-f> scroll-page-down and bind generic <Ctrl-b> scroll-page-up
+
+
+# Open the commit on Github:
+# bind generic B @sh -c "xdg-open 'https://'$(git remote -v | grep -Eo 'github.com[:/][^.]+' | head -1 | tr : /)'/commit/%(commit)'"
+
+
+# Copy commit title to clipboard:
+# Linux
+# bind generic 9 !@sh -c "git show -s --format=%s %(commit) | xclip -selection c"
+# Mac
+# bind generic 9 !@sh -c "git show -s --format=%s %(commit) | pbcopy"
+# Cygwin
+# bind generic 9 !@sh -c "git show -s --format=%s %(commit) > /dev/clipboard"
+
+
+# Hilighting the diffs - make sure diff-highlight is in the path.
+# get the diff highlight with the raw view of
+# https://github.com/git/git/blob/3dbfe2b8ae94cbdae5f3d32581aedaa5510fdc87/contrib/diff-highlight/diff-highlighted
+# and put it in path with chmod +x
+set diff-highlight = true
