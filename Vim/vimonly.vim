@@ -118,11 +118,11 @@ set directory^=$HOME/.vim/tmp//
 " set shortmess+=c
 " set showmode
 " set smartcase
-" set softtabstop=2
+set softtabstop=2
 " set spelllang=en_us
 " set splitbelow
 " set splitright
-" set tabstop=2
+set tabstop=2
 " set textwidth=0
 " set ttimeout
 " set ttyfast

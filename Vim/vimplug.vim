@@ -6,6 +6,19 @@
 " Plugins
 " -----------------------------------------------------------------------------
 
+" install vimplug if not already installed
+if has('nvim') && empty(glob('"${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim'))
+   " neovim setup
+  silent !curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+elseif empty(glob('~/.vim/autoload/plug.vim'))
+  " vim setup
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Specify a directory for plugins.
 call plug#begin('~/.vim/plugged')
 
@@ -13,8 +26,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'joshdick/onedark.vim'
 
 " Integrate fzf with Vim.
-Plug '~/tools/fzf'
-Plug 'junegunn/fzf.vim'
+Plug '~/.fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " Better manage Vim sessions.
 Plug 'tpope/vim-obsession'
