@@ -1,0 +1,60 @@
+# zsh profile
+
+# Update path
+export PATH=$PKDATA/bin:$PATH
+
+# git commands:
+alias gitl="git --no-pager log --decorate=short --pretty=oneline -n10"
+alias gita="git commit --amend"
+alias gits="git status"
+alias gitd="git diff"
+alias gitcom="git commit"
+gitrebi() {
+  git rebase -i $1
+}
+alias gitrebc="git rebase --continue"
+alias gitl1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias gitl2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
+
+
+#vim key binding for the shell
+bindkey -v
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+export KEYTIMEOUT=1
+
+# Fasd config
+eval "$(fasd --init auto)"
+# quick opening files with vim
+alias v='f -e vim'
+
+
+# FZF integration
+export FZF_DEFAULT_COMMAND='Rg --files --hidden --follow --glob "!.git"'
+export FZF_DEFAULT_OPS='--extended'
+
+# Platform specific config goes here
+case `uname` in
+  Darwin)
+    # commands for OS X go here
+  ;;
+  Linux)
+    # commands for Linux go here
+  ;;
+  FreeBSD)
+    # commands for FreeBSD go here
+  ;;
+  CYGWIN_NT-10.0)
+    # Cygwin only commands go here.
+
+    # Fix to run tmux on Windows terminal
+    alias mytm="script -c tmux /dev/null"
+
+  ;;
+esac
