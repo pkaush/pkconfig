@@ -1,0 +1,38 @@
+# Mac Setup
+
+## Install iTerm2
+https://www.iterm2.com/
+
+## Shell
+[Setup Zsh](SetupZsh.md)
+
+## Setup Vscode
+
+1. Download and install Vscode
+1. Update Vscode's setting.json:
+```
+$ rm ~/Library/Application\ Support/Code/User/settings.json
+$ ln -s ~/.pkconfig/Vscode/settings.json Library/Application\ Support/Code/User/settings.json
+```
+
+1. Update Vscode's Keybinding:
+```
+$ rm Library/Application\ Support/Code/User/keybindings.json
+$ ln -s ~/.pkconfig/Vscode/keybindings.json Library/Application\ Support/Code/User/keybindings.json
+```
+
+1. Enable key press and hold for vscode:
+```
+$ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+```
+
+## Install and setup "Karabiner-Elements"
+https://karabiner-elements.pqrs.org/
+Config file coming soon.
+
+## Install Moom from the apple store:
+This will help with window management.
+
+## Install HyperSwitch
+https://bahoom.com/hyperswitch
+
