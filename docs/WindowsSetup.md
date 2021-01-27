@@ -1,8 +1,9 @@
 # Windows Setup
 
 These are my notes for installing and setting up dev environment on Windows. To get posix environment environment there are few options:
+1. MSYS2 - This worked better with FZF and zsh
 1. Cygwin
-2. WSL - 1
+1. WSL
 
 
 ### Install fonts
@@ -42,6 +43,7 @@ For Windows terminal (if we are using it), update the fonts in the terminal sett
 
 1. sudo usermod -d /newhome/username -m username
 1. OR update the /etc/passwd
+
 ## Shell
 
 [Setup Zsh](SetupZsh.md)
