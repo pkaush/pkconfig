@@ -1,9 +1,24 @@
+
 // Vscode user config file
-{
-    "editor.formatOnSave": false,
+    {
+    "[rust]": {
+        "editor.formatOnSave": true,
+        "editor.rulers": [
+            99
+        ],
+        "editor.tabSize": 4,
+        "editor.codeLens": true,
+        "editor.defaultFormatter": "statiolake.vscode-rustfmt",
+    },
+    "rust-analyzer.checkOnSave.allTargets": false,
+    "rust-analyzer.checkOnSave.enable": false,
+    "rust-analyzer.checkOnSave.overrideCommand": null,
+    "rust-analyzer.cargo.allFeatures": true,
+    "rust-analyzer.lens.methodReferences": true,
+    "lldb.launch.terminal": "integrated",
     "clang-format.executable": "C:\\Program Files\\LLVM\\bin\\clang-format.exe",
     "python.formatting.provider": "black",
-    "python.formatting.blackPath": "C:\\Python36\\Scripts\\black.exe",
+    "python.formatting.blackPath": "~/Library/Python/3.7/bin/black",
     "python.autoComplete.addBrackets": true,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -48,7 +63,7 @@
     // Use key mappings from a .vimrc file.
     "vim.vimrc.enable": true,
     // Path to a Vim configuration file. If unset, it will check for $HOME/.vimrc or $HOME/_vimrc.
-    "vim.vimrc.path": "C:\\Users\\puneetk\\.pkconfig\\Vscode\\vscode.vim",
+    "vim.vimrc.path": "~/.pkconfig/Vscode/vscode.vim",
     // Insert mode keybinding
     "vim.insertModeKeyBindings": [
         {
@@ -200,4 +215,6 @@
     },
     "sync.gist": "a8e4df4daa132170a91cdd942d3cd1f0",
     "workbench.colorTheme": "Visual Studio Dark",
+    "python.languageServer": "Microsoft",
+    "cmake.configureOnOpen": false,
 }
