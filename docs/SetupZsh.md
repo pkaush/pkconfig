@@ -54,6 +54,11 @@ sudo apt install make
 
 pkconfig/zsh/profile contains the configuration to set it up.
 
+## Install fonts
+
+Download Firacode or Saucecode pro fonts from https://www.nerdfonts.com/font-downloads
+
+
 ## Setup Powerlever10K theme
 ```
 git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
